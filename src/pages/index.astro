@@ -42,23 +42,23 @@ import SplineScene from '../components/SplineScene';
                
                <div class="relative space-y-8">
                   <div class="space-y-1">
-                     <p class="text-gray-400 uppercase tracking-[0.2em] text-xs">About</p>
+                     <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">About</p>
                      <h2 class="font-russo text-4xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-                        Creative Developer & Designer crafting next-generation digital experiences
+                        Design Engineer crafting next-generation digital experiences
                      </h2>
                   </div>
                   
                   <div class="space-y-8 text-lg">
-                     <p class="text-gray-300 leading-relaxed">
-                        With 15+ years at the intersection of technology and design, I specialize in creating immersive digital experiences that push the boundaries of what's possible on the web.
+                     <p class="text-gray-300 leading-relaxed font-public">
+                        With over 15 years as a designer, I've transitioned into design engineering, bringing a unique perspective that bridges visual design and technical implementation. I specialize in creating immersive digital experiences that push the boundaries of what's possible on the web.
                      </p>
 
-                     <p class="text-gray-300 leading-relaxed">
+                     <p class="text-gray-300 leading-relaxed font-public">
                         Currently, I'm building Rthmn, a cutting-edge data visualization technology for trading markets that transforms complex financial data into intuitive, geometric patterns. Alongside this, I've created Reality Designers, an online community and blog focused on consciousness exploration and personal development.
                      </p>
 
                      <div class="pt-8 border-t border-white/10 space-y-6">
-                        <p class="text-gray-300 leading-relaxed">
+                        <p class="text-gray-300 leading-relaxed font-public">
                            Currently accepting select projects focusing on immersive web experiences, 3D visualization, and high-performance applications.
                         </p>
                         
@@ -77,7 +77,7 @@ import SplineScene from '../components/SplineScene';
                   
                   <div class="relative space-y-12">
                     <div class="space-y-1 mb-12">
-                      <p class="text-gray-400 uppercase tracking-[0.2em] text-xs">Technologies</p>
+                      <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">Technologies</p>
                       <h2 class="font-russo text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                          Technical Stack
                       </h2>
@@ -87,15 +87,15 @@ import SplineScene from '../components/SplineScene';
                       {Object.entries(skills).map(([category, items], index) => (
                         <div class="space-y-6">
                           <div class="flex items-center gap-2">
-                            <span class="text-white/20 font-mono text-xs">{(index + 1).toString().padStart(2, '0')}</span>
-                            <h3 class="font-russo text-white text-sm uppercase tracking-[0.2em]">{category}</h3>
+                            <span class="text-white/20 font-mono text-xs font-medium">{(index + 1).toString().padStart(2, '0')}</span>
+                            <h3 class="font-public text-white text-sm uppercase tracking-[0.15em] font-semibold">{category}</h3>
                           </div>
                 
                           <div class="w-full flex flex-wrap gap-4">
                             {items.map(({ name, icon: Icon }) => (
                               <div class="group flex items-center gap-4 px-4 py-3 rounded-lg bg-black/40 hover:bg-white/5 backdrop-blur-sm transition-all duration-300">
-                                <Icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
-                                <span class="font-space text-sm tracking-wider text-gray-400 group-hover:text-white transition-colors">
+                                <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                                <span class="font-public text-sm font-medium tracking-wide text-gray-300 group-hover:text-white transition-colors">
                                   {name}
                                 </span>
                               </div>
@@ -111,7 +111,7 @@ import SplineScene from '../components/SplineScene';
             <!-- Projects Section -->
             <div class="mt-24">
                <div class="text-center space-y-1 mb-16">
-                  <p class="text-gray-400 uppercase tracking-[0.2em] text-xs">Portfolio</p>
+                  <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">Portfolio</p>
                   <h2 class="font-russo text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
                      Featured Work
                   </h2>
@@ -132,13 +132,14 @@ import SplineScene from '../components/SplineScene';
                            />
                            <div class="space-y-2">
                               <h3 class="font-russo text-xl text-white">{project.title}</h3>
+                              <p class="text-gray-300 text-sm font-public leading-relaxed">{project.description}</p>
                               <a 
                                  href={project.url}
                                  target="_blank" 
                                  rel="noopener noreferrer" 
                                  class="inline-flex items-center gap-2 text-white/60 hover:text-white group"
                               >
-                                 <span class="font-light tracking-wider uppercase text-sm">View Project</span>
+                                 <span class="font-public font-medium tracking-wide uppercase text-xs">View Project</span>
                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                  </svg>

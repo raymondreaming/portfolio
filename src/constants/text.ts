@@ -8,16 +8,21 @@ import {
   SiAstro,
   SiPrisma,
   SiBlender,
+  SiRust,
+  SiBun,
+  SiChartdotjs,
+  SiPlotly,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 
 export const skills = {
   Core: [
-    { name: "Next.js 15+", icon: TbBrandNextjs },
+    { name: "Next.js 16+", icon: TbBrandNextjs },
     { name: "React", icon: SiReact },
     { name: "Astro", icon: SiAstro },
     { name: "TypeScript", icon: SiTypescript },
     { name: "Tailwind", icon: SiTailwindcss },
+    { name: "Bun", icon: SiBun },
   ],
   "3D & Graphics": [
     { name: "Three.js", icon: TbBrandThreejs },
@@ -27,7 +32,16 @@ export const skills = {
     { name: "Spline", icon: BiLogoFigma },
     { name: "D3", icon: TbBrandThreejs },
   ],
+  "Data Visualization": [
+    { name: "D3.js", icon: TbBrandThreejs },
+    { name: "Chart.js", icon: SiChartdotjs },
+    { name: "Plotly", icon: SiPlotly },
+    { name: "WebGL", icon: TbBrandThreejs },
+    { name: "Custom Viz Libraries", icon: SiChartdotjs },
+  ],
   Backend: [
+    { name: "Rust", icon: SiRust },
+    { name: "Elysia", icon: SiBun },
     { name: "Headless CMS", icon: TbBrandNextjs },
     { name: "Sanity.io", icon: SiReact },
     { name: "Prisma", icon: SiPrisma },
@@ -37,6 +51,8 @@ export const skills = {
   Expertise: [
     { name: "3D Web Development", icon: TbBrandThreejs },
     { name: "Interactive Scenes", icon: TbBrandThreejs },
+    { name: "Algo Trading Software", icon: SiChartdotjs },
+    { name: "Data Visualization", icon: SiChartdotjs },
     { name: "Content Modeling", icon: SiReact },
     { name: "UI/UX Design", icon: BiLogoFigma },
     { name: "SEO Optimization", icon: TbBrandNextjs },

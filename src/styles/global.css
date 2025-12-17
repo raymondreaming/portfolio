@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@fontsource/staatliches";
 @import "@fontsource/bungee";
+@import "@fontsource-variable/public-sans";
 @import "tailwindcss";
 
 @font-face {
@@ -27,4 +28,8 @@
 
 .font-bungee {
   font-family: "Bungee", sans-serif;
+}
+
+.font-public {
+  font-family: "Public Sans Variable", "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
