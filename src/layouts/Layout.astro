@@ -1,30 +1,93 @@
 ---
 import "../styles/global.css";
 import { ClientRouter, fade } from 'astro:transitions';
-import Navbar from '../components/Navbar';
+
 interface Props {
-   title: string;
+   title?: string;
+   description?: string;
+   image?: string;
+   type?: string;
 }
 
-const { title } = Astro.props;
+const site = Astro.site || new URL("https://raymondreamer.com");
+const canonicalURL = new URL(Astro.url.pathname, site);
+const title = Astro.props.title || "Raymondreamer | Design Engineer & Creative Developer";
+const description = Astro.props.description || "Design Engineer with 15+ years of design experience, specializing in immersive web experiences, 3D visualization, data visualization, and high-performance applications. Creator of Rthmn and Reality Designers.";
+const image = Astro.props.image || new URL("/images/rd.png", site).href;
+const type = Astro.props.type || "website";
 ---
 
 <!doctype html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta name="description" content="Astro description" />
-      <meta name="viewport" content="width=device-width" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <meta name="generator" content={Astro.generator} />
+      
+      <!-- Primary Meta Tags -->
       <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="author" content="Raymondreamer" />
+      <meta name="keywords" content="design engineer, creative developer, 3D web development, data visualization, Next.js, React, Astro, TypeScript, Rust, Elysia, Bun, algorithmic trading, WebGL, Three.js, design engineering, frontend development" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      
+      <!-- Canonical URL -->
+      <link rel="canonical" href={canonicalURL} />
+      
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonicalURL} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Raymondreamer" />
+      <meta property="og:locale" content="en_US" />
+      
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={canonicalURL} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:creator" content="@realitydesignrs" />
+      
+      <!-- Additional SEO -->
+      <meta name="theme-color" content="#000000" />
+      <link rel="apple-touch-icon" href="/favicon.svg" />
+      
+      <!-- Structured Data (JSON-LD) -->
+      <script type="application/ld+json" set:html={JSON.stringify({
+         "@context": "https://schema.org",
+         "@type": "Person",
+         "name": "Raymondreamer",
+         "url": site.href,
+         "sameAs": [
+            "https://www.youtube.com/@realitydesigners",
+            "https://twitter.com/realitydesignrs",
+            "https://www.instagram.com/raymondreamer",
+            "https://github.com/realitydesigners"
+         ],
+         "jobTitle": "Design Engineer",
+         "description": description,
+         "knowsAbout": [
+            "Web Development",
+            "3D Graphics",
+            "Data Visualization",
+            "Design Engineering",
+            "Frontend Development"
+         ]
+      })}></script>
+      
       <ClientRouter />
 
       <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.507/build/spline-viewer.js"></script>
    </head>
    <body class="bg-black">
       <main transition:animate={fade({ duration: '0.3s' })}>
-         <Navbar client:load />
          <slot />
       </main>
    </body>

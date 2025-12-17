@@ -1,7 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
-import Navbar from '../components/Navbar';
 import BaseHead from '../components/BaseHead.astro';
 interface Props {
    title: string;
@@ -54,7 +53,6 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
    </head>
    <body class="bg-black">
       <main transition:animate="fade" class="pb-40">
-         <Navbar client:load />
          <slot />
       </main>
    </body>
