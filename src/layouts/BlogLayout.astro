@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import BaseHead from '../components/BaseHead.astro';
 interface Props {
    title: string;
@@ -46,7 +46,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={new URL(image, Astro.url)} />
-      <ViewTransitions transition:animate="slide" />
+      <ClientRouter />
 
       <BaseHead title={title} description={description} />
       <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.507/build/spline-viewer.js"></script>

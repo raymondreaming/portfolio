@@ -1,8 +1,7 @@
-@import "tailwindcss";
+@import "tailwindcss/index.css";
 @import "@fontsource/staatliches";
 @import "@fontsource/bungee";
 @import "@fontsource-variable/public-sans";
-@import "tailwindcss";
 
 @font-face {
   font-family: "Bungee";
