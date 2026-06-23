@@ -1,68 +1,66 @@
-# Astro Starter Kit: Blog
+# Raymond
 
-```sh
-npm create astro@latest -- --template blog
-```
+I build trading algorithms and design reality.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+Self-taught design engineer with 10+ years shaping visual systems and 4+ years shipping code. Focused on real-time data visualization, 3D interfaces, AI-assisted development, and algorithmic trading systems.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[Website](https://www.raymondreamer.com) · [YouTube](https://www.youtube.com/@realitydesigners) · [X](https://x.com/raymondreaming) · [Instagram](https://www.instagram.com/raymondreamer) · [GitHub](https://github.com/raymondreaming)
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## Building
 
-Features:
+### [Rthmn](https://rthmn.com)
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+A market-structure platform that transforms complex financial data into geometric patterns for real-time analysis, visualization, and algorithmic trading.
 
-## 🚀 Project Structure
+### [Reality Designers](https://www.realitydesigners.com)
 
-Inside of your Astro project, you'll see the following folders and files:
+A community and content platform exploring perception, consciousness, creative systems, and human potential.
 
-```text
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+### [Inferay](https://inferay.com)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+A multi-agent terminal for Claude and Codex, built with Electrobun and React.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Tech Stack
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+| Domain | Specialization | Technologies |
+| --- | --- | --- |
+| Core Programming | Languages | TypeScript, JavaScript, Python, Rust, Swift |
+| Frontend Development | Frameworks & State | React, Next.js, Astro, Vite, Server Components |
+| UI Libraries & Styling | Design Systems | Tailwind CSS, shadcn/ui, Radix UI, CSS, Figma |
+| Animation | Motion Systems | Framer Motion, GSAP, CSS animation, interaction states |
+| 3D & Graphics | Realtime Graphics | Three.js, React Three Fiber, WebGL, GLSL shaders, Spline, Blender |
+| Data Visualization | Market & Interface Visualization | D3.js, Plotly, Chart.js, custom visualization systems |
+| Creative Systems | Spatial & Generative Interfaces | 3D scenes, procedural visuals, immersive web experiences |
+| Backend & Data | Runtime & APIs | Bun, Elysia, Node.js, REST APIs, server-side rendering |
+| Databases & ORMs | Data Modeling | PostgreSQL, TimescaleDB, Prisma, Convex |
+| BaaS / Platform | Product Infrastructure | Supabase, Convex, Sanity |
+| Authentication | Identity Management | Auth systems, session management, platform auth flows |
+| DevOps & Web Tools | CI/CD | GitHub Actions, repository automation, command-line workflows |
+| Deployment | Hosting | Vercel, Cloudflare, static and server-rendered web apps |
+| API & Design Tools | Product Tooling | Figma, GitHub, AI-assisted development workflows |
+| Mobile | Apple Platforms | Swift, iOS, Apple platform fundamentals |
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Open Source & Tools
 
-## 🧞 Commands
+### [scripts](https://github.com/raymondreaming/scripts)
 
-All commands are run from the root of the project, from a terminal:
+Developer workflow tools for tmux session management, repository automation, and AI-powered commit summaries.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### [zed-theme](https://github.com/raymondreaming/zed-theme)
 
-## 👀 Want to learn more?
+A custom Zed editor theme built around a focused, minimal, high-contrast development environment.
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### [portfolio](https://github.com/raymondreaming/portfolio)
 
-## Credit
+The Astro site for Raymondreamer, built around interactive visuals, project pages, and design engineering work.
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## Focus Areas
+
+- Real-time systems and financial visualization
+- 3D interfaces and spatial software
+- AI-assisted developer tooling
+- Design systems and interaction design
+- Algorithmic trading infrastructure
+- Creative tools for perception, learning, and self-optimization
+
+[Website](https://www.raymondreamer.com) · [YouTube](https://www.youtube.com/@realitydesigners) · [X](https://x.com/raymondreaming) · [Instagram](https://www.instagram.com/raymondreamer)

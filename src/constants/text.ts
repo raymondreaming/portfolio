@@ -66,8 +66,8 @@ export const socialLinks = [
     icon: FaYoutube,
   },
   {
-    name: "Twitter",
-    url: "https://twitter.com/realitydesignrs",
+    name: "X",
+    url: "https://x.com/raymondreaming",
     icon: FaTwitter,
   },
   {
@@ -77,12 +77,12 @@ export const socialLinks = [
   },
   {
     name: "Github",
-    url: "https://github.com/realitydesigners",
+    url: "https://github.com/raymondreaming",
     icon: FaGithub,
   },
   {
-    name: "Portfolio",
-    url: "https://app.spline.design/@realitydesigners",
+    name: "Website",
+    url: "https://www.raymondreamer.com",
     icon: BiLogoFigma,
   },
 ];
@@ -91,15 +91,16 @@ export const projects = [
   {
     title: "Reality Designers",
     description:
-      "A community platform for consciousness exploration and personal development",
-    url: "https://reality-designers.com",
+      "A community and content platform exploring perception, consciousness, creative systems, and human potential",
+    url: "https://www.realitydesigners.com",
     image: "/images/rd.png",
     alt: "Reality Designers Platform Screenshot",
     tags: ["Next.js", "React", "Three.js"],
   },
   {
     title: "Rthmn",
-    description: "Advanced data visualization for trading markets",
+    description:
+      "A market-structure platform that transforms financial data into geometric patterns for real-time analysis and algorithmic trading",
     url: "https://rthmn.com",
     image: "/images/rthmn.png",
     alt: "Rthmn Trading Platform Screenshot",
