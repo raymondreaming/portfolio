@@ -12,7 +12,7 @@ interface Props {
 const site = Astro.site || new URL("https://raymondreamer.com");
 const canonicalURL = new URL(Astro.url.pathname, site);
 const title = Astro.props.title || "Raymondreamer | Design Engineer & Creative Developer";
-const description = Astro.props.description || "Design Engineer with 15+ years of design experience, specializing in immersive web experiences, 3D visualization, data visualization, and high-performance applications. Creator of Rthmn and Reality Designers.";
+const description = Astro.props.description || "Self-taught design engineer with 10+ years shaping visual systems and 4+ years shipping code. Focused on real-time data visualization, 3D interfaces, AI-assisted development, and algorithmic trading systems.";
 const image = Astro.props.image || new URL("/images/rd.png", site).href;
 const type = Astro.props.type || "website";
 ---
@@ -30,7 +30,7 @@ const type = Astro.props.type || "website";
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="author" content="Raymondreamer" />
-      <meta name="keywords" content="design engineer, creative developer, 3D web development, data visualization, Next.js, React, Astro, TypeScript, Rust, Elysia, Bun, algorithmic trading, WebGL, Three.js, design engineering, frontend development" />
+      <meta name="keywords" content="Raymond, Raymondreamer, design engineer, trading algorithms, algorithmic trading, real-time data visualization, market structure, 3D interfaces, spatial software, AI-assisted development, Codex, Claude, Electrobun, React, Astro, TypeScript, Rust, Bun, WebGL, Three.js, design systems" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
@@ -53,7 +53,7 @@ const type = Astro.props.type || "website";
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@realitydesignrs" />
+      <meta name="twitter:creator" content="@raymondreaming" />
       
       <!-- Additional SEO -->
       <meta name="theme-color" content="#000000" />
@@ -67,17 +67,25 @@ const type = Astro.props.type || "website";
          "url": site.href,
          "sameAs": [
             "https://www.youtube.com/@realitydesigners",
-            "https://twitter.com/realitydesignrs",
+            "https://x.com/raymondreaming",
             "https://www.instagram.com/raymondreamer",
-            "https://github.com/realitydesigners"
+            "https://github.com/raymondreaming",
+            "https://www.realitydesigners.com",
+            "https://rthmn.com",
+            "https://inferay.com"
          ],
          "jobTitle": "Design Engineer",
          "description": description,
          "knowsAbout": [
-            "Web Development",
-            "3D Graphics",
-            "Data Visualization",
-            "Design Engineering",
+            "Algorithmic Trading",
+            "Market Structure",
+            "Real-Time Data Visualization",
+            "3D Interfaces",
+            "Spatial Software",
+            "AI-Assisted Developer Tooling",
+            "Design Systems",
+            "WebGL",
+            "Three.js",
             "Frontend Development"
          ]
       })}></script>

@@ -17,45 +17,69 @@ import { DiCss3 } from "react-icons/di";
 
 export const skills = {
   Core: [
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "JavaScript", icon: SiTypescript },
+    { name: "Python", icon: SiReact },
+    { name: "Rust", icon: SiRust },
+    { name: "Swift", icon: SiReact },
+  ],
+  "Frontend Development": [
     { name: "Next.js 16+", icon: TbBrandNextjs },
     { name: "React", icon: SiReact },
     { name: "Astro", icon: SiAstro },
-    { name: "TypeScript", icon: SiTypescript },
+    { name: "Vite", icon: SiAstro },
+    { name: "Server Components", icon: SiReact },
+  ],
+  "UI & Styling": [
     { name: "Tailwind", icon: SiTailwindcss },
-    { name: "Bun", icon: SiBun },
+    { name: "shadcn/ui", icon: SiReact },
+    { name: "Radix UI", icon: SiReact },
+    { name: "CSS", icon: DiCss3 },
+    { name: "Figma", icon: BiLogoFigma },
+  ],
+  Animation: [
+    { name: "Framer Motion", icon: SiReact },
+    { name: "GSAP", icon: DiCss3 },
+    { name: "CSS Motion", icon: DiCss3 },
+    { name: "Interaction States", icon: BiLogoFigma },
   ],
   "3D & Graphics": [
     { name: "Three.js", icon: TbBrandThreejs },
     { name: "React-Three-Fiber", icon: TbBrandThreejs },
+    { name: "WebGL", icon: TbBrandThreejs },
+    { name: "GLSL Shaders", icon: DiCss3 },
     { name: "Shaders", icon: DiCss3 },
     { name: "Blender", icon: SiBlender },
     { name: "Spline", icon: BiLogoFigma },
-    { name: "D3", icon: TbBrandThreejs },
   ],
   "Data Visualization": [
     { name: "D3.js", icon: TbBrandThreejs },
     { name: "Chart.js", icon: SiChartdotjs },
     { name: "Plotly", icon: SiPlotly },
-    { name: "WebGL", icon: TbBrandThreejs },
+    { name: "Market Structure", icon: SiChartdotjs },
     { name: "Custom Viz Libraries", icon: SiChartdotjs },
   ],
   Backend: [
-    { name: "Rust", icon: SiRust },
+    { name: "Bun", icon: SiBun },
     { name: "Elysia", icon: SiBun },
-    { name: "Headless CMS", icon: TbBrandNextjs },
-    { name: "Sanity.io", icon: SiReact },
-    { name: "Prisma", icon: SiPrisma },
-    { name: "Auth Systems", icon: TbBrandNextjs },
-    { name: "Server Components", icon: SiReact },
+    { name: "Node.js", icon: SiReact },
+    { name: "REST APIs", icon: SiReact },
+    { name: "Server-Side Rendering", icon: TbBrandNextjs },
   ],
-  Expertise: [
-    { name: "3D Web Development", icon: TbBrandThreejs },
-    { name: "Interactive Scenes", icon: TbBrandThreejs },
-    { name: "Algo Trading Software", icon: SiChartdotjs },
-    { name: "Data Visualization", icon: SiChartdotjs },
-    { name: "Content Modeling", icon: SiReact },
-    { name: "UI/UX Design", icon: BiLogoFigma },
-    { name: "SEO Optimization", icon: TbBrandNextjs },
+  "Data & Platform": [
+    { name: "PostgreSQL", icon: SiPrisma },
+    { name: "TimescaleDB", icon: SiChartdotjs },
+    { name: "Prisma", icon: SiPrisma },
+    { name: "Convex", icon: SiReact },
+    { name: "Supabase", icon: SiReact },
+    { name: "Sanity", icon: SiReact },
+  ],
+  "DevOps & Tools": [
+    { name: "GitHub Actions", icon: FaGithub },
+    { name: "Vercel", icon: TbBrandNextjs },
+    { name: "Cloudflare", icon: SiReact },
+    { name: "tmux", icon: SiReact },
+    { name: "AI Commit Workflows", icon: SiReact },
   ],
 } as const;
 
@@ -89,21 +113,58 @@ export const socialLinks = [
 
 export const projects = [
   {
-    title: "Reality Designers",
-    description:
-      "A community and content platform exploring perception, consciousness, creative systems, and human potential",
-    url: "https://www.realitydesigners.com",
-    image: "/images/rd.png",
-    alt: "Reality Designers Platform Screenshot",
-    tags: ["Next.js", "React", "Three.js"],
-  },
-  {
     title: "Rthmn",
     description:
-      "A market-structure platform that transforms financial data into geometric patterns for real-time analysis and algorithmic trading",
+      "A market-structure platform that transforms financial data into geometric patterns for real-time analysis, visualization, and algorithmic trading.",
     url: "https://rthmn.com",
     image: "/images/rthmn.png",
     alt: "Rthmn Trading Platform Screenshot",
-    tags: ["WebGL", "D3.js", "React"],
+    tags: ["Market Structure", "WebGL", "Trading Systems"],
+  },
+  {
+    title: "Reality Designers",
+    description:
+      "A community and content platform exploring perception, consciousness, creative systems, and human potential.",
+    url: "https://www.realitydesigners.com",
+    image: "/images/rd.png",
+    alt: "Reality Designers Platform Screenshot",
+    tags: ["Community", "Content Systems", "Creative Tools"],
+  },
+  {
+    title: "Inferay",
+    description:
+      "A multi-agent terminal for Claude and Codex, built with Electrobun and React.",
+    url: "https://inferay.com",
+    tags: ["AI Tooling", "Electrobun", "React"],
   },
 ];
+
+export const openSourceTools = [
+  {
+    title: "scripts",
+    description:
+      "Developer workflow tools for tmux session management, repository automation, and AI-powered commit summaries.",
+    url: "https://github.com/raymondreaming/scripts",
+  },
+  {
+    title: "zed-theme",
+    description:
+      "A custom Zed editor theme built around a focused, minimal, high-contrast development environment.",
+    url: "https://github.com/raymondreaming/zed-theme",
+  },
+  {
+    title: "portfolio",
+    description:
+      "The Astro site for Raymondreamer, built around interactive visuals, project pages, and design engineering work.",
+    url: "https://github.com/raymondreaming/portfolio",
+  },
+];
+
+export const focusAreas = [
+  "Real-time systems and financial visualization",
+  "3D interfaces and spatial software",
+  "AI-assisted developer tooling",
+  "Design systems and interaction design",
+  "Algorithmic trading infrastructure",
+  "Creative tools for perception, learning, and self-optimization",
+] as const;

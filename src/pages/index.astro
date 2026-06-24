@@ -1,8 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import { skills } from '../constants/text';
-import { socialLinks, projects } from '../constants/text';
+import { focusAreas, openSourceTools, projects, skills, socialLinks } from '../constants/text';
 import SplineScene from '../components/SplineScene';
 ---
 
@@ -19,8 +18,11 @@ import SplineScene from '../components/SplineScene';
           <SplineScene client:load />
          </div>
          <h1 class="font-russo text-center text-3xl lg:text-6xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-            Raymondreamer
+            Raymond
          </h1>
+         <p class="font-public text-center text-gray-300 text-lg lg:text-xl max-w-3xl -mt-8 mb-10 leading-relaxed">
+            I build trading algorithms and design reality.
+         </p>
          <div class="flex w-full justify-center items-center flex-wrap gap-4">
             {
                socialLinks.map(({ name, url, icon: Icon }) => (
@@ -48,7 +50,7 @@ import SplineScene from '../components/SplineScene';
                   <div class="space-y-1">
                      <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">About</p>
                      <h2 class="font-russo text-4xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-                        Design Engineer crafting next-generation digital experiences
+                        Design engineer building real-time systems, spatial interfaces, and creative tools
                      </h2>
                   </div>
                   
@@ -65,10 +67,29 @@ import SplineScene from '../components/SplineScene';
                         <p class="text-gray-300 leading-relaxed font-public">
                            Focus areas include real-time systems and financial visualization, spatial software, design systems, AI-assisted development workflows, and creative tools for perception, learning, and self-optimization.
                         </p>
-                        
-                       
                      </div>
                   </div>
+               </div>
+            </div>
+
+            <!-- Focus Section -->
+            <div class="mt-24">
+               <div class="text-center space-y-1 mb-16">
+                  <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">Direction</p>
+                  <h2 class="font-russo text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+                     Focus Areas
+                  </h2>
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {focusAreas.map((area, index) => (
+                     <div class="group backdrop-blur-lg bg-black/60 p-5 rounded-2xl relative overflow-hidden shadow-2xl">
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
+                        <div class="relative flex gap-4">
+                           <span class="text-white/20 font-mono text-xs font-medium">{(index + 1).toString().padStart(2, '0')}</span>
+                           <p class="font-public text-sm text-gray-300 leading-relaxed group-hover:text-white transition-colors">{area}</p>
+                        </div>
+                     </div>
+                  ))}
                </div>
             </div>
 
@@ -120,23 +141,34 @@ import SplineScene from '../components/SplineScene';
                      Featured Work
                   </h2>
                </div>
-               <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                   {projects.map(project => (
                      <div class="group backdrop-blur-lg bg-black/60 p-6 rounded-2xl shadow-2xl overflow-hidden relative">
                         <!-- Grid Background -->
                         <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
                         
                         <div class="relative space-y-4">
-                           <Image 
-                              src={project.image} 
-                              alt={project.alt} 
-                              width={600} 
-                              height={400}
-                              class="rounded-lg w-full object-cover aspect-video"
-                           />
+                           {'image' in project && project.image ? (
+                              <Image 
+                                 src={project.image} 
+                                 alt={project.alt} 
+                                 width={600} 
+                                 height={400}
+                                 class="rounded-lg w-full object-cover aspect-video"
+                              />
+                           ) : (
+                              <div class="rounded-lg w-full aspect-video border border-white/10 bg-black/60 flex items-center justify-center">
+                                 <span class="font-russo text-3xl text-white/80">{project.title}</span>
+                              </div>
+                           )}
                            <div class="space-y-2">
                               <h3 class="font-russo text-xl text-white">{project.title}</h3>
                               <p class="text-gray-300 text-sm font-public leading-relaxed">{project.description}</p>
+                              <div class="flex flex-wrap gap-2 pt-2">
+                                 {project.tags.map(tag => (
+                                    <span class="font-public text-[0.65rem] uppercase tracking-[0.15em] text-gray-400 border border-white/10 rounded px-2 py-1">{tag}</span>
+                                 ))}
+                              </div>
                               <a 
                                  href={project.url}
                                  target="_blank" 
@@ -154,8 +186,29 @@ import SplineScene from '../components/SplineScene';
                   ))}
                </div>
             </div>
+
+            <!-- Open Source Section -->
+            <div class="mt-24">
+               <div class="text-center space-y-1 mb-16">
+                  <p class="text-gray-400 uppercase tracking-[0.2em] text-xs font-public font-semibold">Open Source</p>
+                  <h2 class="font-russo text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+                     Tools & Repos
+                  </h2>
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {openSourceTools.map(tool => (
+                     <a href={tool.url} target="_blank" rel="noopener noreferrer" class="group backdrop-blur-lg bg-black/60 p-6 rounded-2xl shadow-2xl overflow-hidden relative block">
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
+                        <div class="relative space-y-3">
+                           <h3 class="font-russo text-xl text-white">{tool.title}</h3>
+                           <p class="text-gray-300 text-sm font-public leading-relaxed">{tool.description}</p>
+                           <span class="inline-flex font-public font-medium tracking-wide uppercase text-xs text-white/60 group-hover:text-white">View Repository</span>
+                        </div>
+                     </a>
+                  ))}
+               </div>
+            </div>
          </div>
       </section>
    </main>
 </Layout>
-
